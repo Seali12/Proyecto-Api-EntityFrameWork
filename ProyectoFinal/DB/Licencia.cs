@@ -20,7 +20,9 @@ namespace DB
         public virtual Soldado soldado {get;set;}
 
         [Required(ErrorMessage = "El dni del soldado no fue completado")]
-        public int SoldadoDni { get; set; }
+        [StringLength(9, MinimumLength = 8, ErrorMessage = "error al crear el dni")]
+        [RegularExpression(@"^\d+$", ErrorMessage = "El DNI solo puede contener números")]
+        public string SoldadoDni { get; set; }
 
         [Required(ErrorMessage = "La fecha de inicio no fue completada")]
         public DateTime fechaInicio { get; set; }

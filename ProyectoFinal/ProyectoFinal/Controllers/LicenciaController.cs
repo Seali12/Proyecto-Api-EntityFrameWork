@@ -299,7 +299,7 @@ namespace ProyectoFinal.Controllers
         /// Mensaje: "Ha ocurrido un error desconocido."
         /// Contenido: null
         [HttpDelete]
-        public async Task<IActionResult> Delete(int dniBuscado)
+        public async Task<IActionResult> Delete(string dniBuscado)
         {
             if (!ModelState.IsValid)
             {

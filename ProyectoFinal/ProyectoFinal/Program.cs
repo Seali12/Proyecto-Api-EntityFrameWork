@@ -23,13 +23,13 @@ builder.Services.AddScoped<ILicenciaService, LicenciaService>();
 
 var app = builder.Build();
 
-/*
+
 using (var scope = app.Services.CreateScope()) //permite acceder a ciertas props de la app
 {
     var contextDB = scope.ServiceProvider.GetRequiredService<ProyectoFinalContext>();
     contextDB.Database.Migrate();
 }
-*/
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

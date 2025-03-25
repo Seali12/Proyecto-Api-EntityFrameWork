@@ -21,8 +21,9 @@ namespace DB
         public string Apellido { get; set; }
 
         [Required(ErrorMessage = "El Dni del soldado no fue completado correctamente")]
-        [Range(10000000, 999999999, ErrorMessage = "el dni esta mal")]
-        public int Dni { get; set; }
+        [StringLength(9, MinimumLength = 8)]
+        [RegularExpression(@"^\d+$", ErrorMessage = "El DNI solo puede contener números")]
+        public string Dni { get; set; }
 
         //public virtual IEnumerable<Licencia> Licencias { get; set; }
 

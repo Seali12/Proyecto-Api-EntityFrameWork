@@ -6,7 +6,7 @@ namespace ProyectoFinal.Services
     {
         Task<IEnumerable<Licencia>> GetLicenciasAsync();
         Task<Licencia> CreateLicenciaAsync(Licencia nuevaLicencia);
-        Task<Licencia> UpdateLicenciaAsync(int dni, Licencia licenciaNueva);
-        Task<bool> DeleteLicenciaAsync(int dniBuscado);
+        Task<Licencia> UpdateLicenciaAsync(string dni, Licencia licenciaNueva);
+        Task<bool> DeleteLicenciaAsync(string dniBuscado);
     }
 }

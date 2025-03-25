@@ -31,7 +31,7 @@ namespace ProyectoFinal.Services
             await _genericLicencia.Create(nuevaLicencia);
             return nuevaLicencia;
         }
-        public async Task<Licencia> UpdateLicenciaAsync(int dni, Licencia licenciaNueva)
+        public async Task<Licencia> UpdateLicenciaAsync(string dni, Licencia licenciaNueva)
         {
             var licenciaBuscada = _unitOfWork.Context.Licencias.FirstOrDefault(b => b.SoldadoDni == dni);
 
@@ -81,7 +81,7 @@ namespace ProyectoFinal.Services
             return licenciaBuscada;
         }
   
-        public async Task<bool> DeleteLicenciaAsync(int dniBuscado)
+        public async Task<bool> DeleteLicenciaAsync(string dniBuscado)
         {
            
             var licenciaBuscada = _unitOfWork.Context.Licencias.FirstOrDefault(b => b.SoldadoDni == dniBuscado);
