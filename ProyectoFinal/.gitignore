@@ -1,0 +1,49 @@
+# Visual Studio archivos de compilación
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.ilk
+*.log
+*.sbr
+*.sdf
+*.ipch
+*.aps
+*.ncb
+*.opendb
+*.tt
+
+# Entity Framework
+Migrations/
+Database.mdf
+Database.ldf
+
+# Configuración de usuario y archivos locales
+appsettings.json
+appsettings.Development.json
+
+# Dependencias
+packages/
+node_modules/
+project.lock.json
+project.assets.json
+
+# Rider / JetBrains
+.idea/
+*.dotCover
+*.sln.iml
+
+# Archivos de depuración
+dump/
+*.dmp
+*.log
